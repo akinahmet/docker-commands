@@ -2,10 +2,10 @@
 
 ### Docker Container Commands
 
-Create a container without starting it.
+Create a new container without starting it.
 
 ```text
-docker create [IMAGE]
+docker create 
 ```
 
 Rename an existing container
@@ -14,10 +14,10 @@ Rename an existing container
 docker rename [CONTAINER_NAME] [NEW_CONTAINER_NAME]
 ```
 
-Run a command in a new container
+Create docker container from a docker image.
 
 ```text
-docker run [IMAGE] [COMMAND]
+docker run 
 ```
 
 ```text
@@ -33,27 +33,109 @@ docker run -it-rm [IMAGE] # creates, starts, and runs a command inside the conta
 Delete a container (if it is not running).
 
 ```text
-docker rm [CONTAINER]
+docker rm 
 ```
+
+Attach Terminal to running container
+
+```text
+docker attach
+```
+
 
 Update the configuration of one or more containers.
 
+
 ```text
-docker update [CONTAINER]
+docker update 
 ```
 Start a container
 
 ```text
-docker start [CONTAINER]
+docker start 
 ```
 Stop a running container
 
 ```text
-docker stop [CONTAINER]
+docker stop 
 ```
 
 Stop a running container and start it up again.
 
 ```text
-docker restart [CONTAINER]
+docker restart 
+```
+
+### Docker Image Commands
+
+Create an image from a Dockerfile
+
+```text
+docker build [URL]
+```
+
+Pull an image from a registry
+
+```text
+docker pull [IMAGE]
+```
+
+Push an image to a registry
+
+```text
+docker push [IMAGE]
+```
+
+### Docker Commands for Information
+
+Shows running containers.
+
+```text
+docker ps
+```
+
+All info about a container
+
+```text
+docker inspect
+```
+
+List real-time events from a container.
+
+
+```text
+docker events [CONTAINER]
+```
+
+
+### Docker Network Commands
+
+List networks
+
+```text
+docker network ls
+```
+
+Remove network(s)
+
+```text
+docker network rm [NETWORK]
+```
+
+Show information.
+
+```text
+docker network inspect [NETWORK]
+```
+
+Connects a container to a network
+
+```text
+docker network connect [NETWORK] [CONTAINER]
+```
+
+Disconnect a container from a network
+
+```text
+docker network disconnect [NETWORK] [CONTAINER]
 ```
